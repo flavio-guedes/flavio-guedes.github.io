@@ -370,8 +370,15 @@
             transition: transform 0.2s, box-shadow 0.2s;
         }
         .btn:hover { transform: translateY(-2px); box-shadow: 0 12px 36px rgba(79, 227, 255, 0.35), 0 0 40px rgba(124, 92, 255, 0.4); }
-        .btn.ghost { background: var(--glass); box-shadow: none; }
-        .by { margin-top: 2.2rem; font-size: 0.9rem; color: var(--text-muted); }
+        .btn.whatsapp {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            border-color: rgba(37, 211, 102, 0.5);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+        }
+        .btn.whatsapp:hover {
+            box-shadow: 0 12px 36px rgba(37, 211, 102, 0.4), 0 0 40px rgba(18, 140, 126, 0.4);
+            transform: translateY(-2px);
+        }
 
 
         .container { margin-top: -3.5rem; }
@@ -742,7 +749,7 @@
       <p class="eyebrow">Serviço de produto digital para recrutadores</p>
       <h1>IA <span>Recruiter</span></h1>
       <p class="lead">Setup do <strong>fluxo completo</strong> de recrutamento com IA, do <strong>briefing da vaga</strong> ao <strong>onboarding</strong>.</p>
-      <div class="hero-cta"><a class="btn" href="#contato">Quero o setup</a><a class="btn ghost" href="#prova">Ver o case</a></div>
+      <div class="hero-cta"><a class="btn" href="#contato">Quero o setup</a><a class="btn ghost" href="#prova">Ver o case</a><a class="btn whatsapp" href="https://wa.me/5521999719474" target="_blank" rel="noopener">Falar no WhatsApp</a></div>
       <p class="by"><strong>Flávio Guedes</strong> | Operações de RH, Automação e IA</p>
     </div>
   </div>
@@ -789,6 +796,7 @@
   <footer class="portfolio-footer">
     <h2>Portfólio</h2>
     <div class="links"><a href="https://flavio-guedes.github.io/portfolio/ia_recruiter.html" target="_blank" rel="noopener">Case IA Recruiter</a><a href="https://flavio-guedes.github.io/portfolio/" target="_blank" rel="noopener">Portfólio completo</a></div>
+    <p class="by" style="margin-top:1.2rem"><a class="btn whatsapp" href="https://wa.me/5521999719474" target="_blank" rel="noopener" style="font-size:0.85rem;padding:0.6rem 1.4rem">Falar no WhatsApp</a></p>
   </footer>
 </div>
 </body>

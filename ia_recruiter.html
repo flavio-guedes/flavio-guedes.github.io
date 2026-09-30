@@ -107,6 +107,7 @@ a:focus-visible{outline:2px solid var(--cyan); outline-offset:3px}
   font-weight:700;
   letter-spacing:-0.02em;
   color:#fff;
+  margin-bottom:.5rem;
 }
 .hero h1 span{
   background:linear-gradient(90deg,var(--blue),var(--cyan));
@@ -214,6 +215,8 @@ a:focus-visible{outline:2px solid var(--cyan); outline-offset:3px}
   color:#fff;
 }
 .content{min-width:0}
+
+/* ===== SEÇOES PADRÃO: problema, entregaveis, prova, contato, custom, proximopasso ===== */
 .content section{
   background:var(--glass);
   border:1px solid var(--glass-border);
@@ -324,7 +327,7 @@ a:focus-visible{outline:2px solid var(--cyan); outline-offset:3px}
   color:transparent;
 }
 
-/* ===== SEÇÃO 02: SOLUÇÃO (painel esquerda) ===== */
+/* ===== SEÇAO 02: SOLUCAO (painel left) ===== */
 .panel-left{
   width:min(50%,100%);
   padding:2rem;
@@ -333,7 +336,13 @@ a:focus-visible{outline:2px solid var(--cyan); outline-offset:3px}
   border-radius:24px;
   backdrop-filter:blur(20px);
 }
-.panel-left h2{margin-bottom:1rem}
+.panel-left h2{margin-bottom:1rem; font-size:1.3rem}
+.panel-left p{
+  font-size:1rem;
+  color:var(--text-soft);
+  margin-bottom:1rem;
+}
+.panel-left p strong{color:#fff}
 .panel-left .cards.five{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -351,6 +360,7 @@ a:focus-visible{outline:2px solid var(--cyan); outline-offset:3px}
   background:rgba(255,255,255,.03);
   border:1px solid transparent;
   border-radius:12px;
+  transition:background .2s,border-color .2s;
 }
 .panel-left .card:last-child{margin-bottom:0}
 .panel-left .card .num{
@@ -371,13 +381,14 @@ a:focus-visible{outline:2px solid var(--cyan); outline-offset:3px}
   font-size:.88rem;
   margin:0;
   line-height:1.5;
+  color:var(--text-soft);
 }
 .panel-left .card:hover{
   background:rgba(255,255,255,.06);
   border-color:var(--glass-border);
 }
 
-/* ===== SEÇÃO 03: ENTREGAVEIS (faixa escura) ===== */
+/* seção 03: entregaveis - faixa escura full-width */
 #entregaveis{
   background:linear-gradient(180deg,rgba(2,10,32,.72),rgba(6,22,64,.7));
   border:0;
@@ -409,7 +420,7 @@ a:focus-visible{outline:2px solid var(--cyan); outline-offset:3px}
   margin:1.5rem auto 0;
 }
 
-/* ===== SEÇÃO 04: PROCESSO (painel claro) ===== */
+/* ===== SEÇA O 04: processo - panel-right.light ===== */
 .panel-right.light{
   width:min(48%,100%);
   padding:2rem;
@@ -424,14 +435,6 @@ a:focus-visible{outline:2px solid var(--cyan); outline-offset:3px}
   color:#3d4d7a;
   font-size:.95rem;
   margin-bottom:1.4rem;
-}
-.steps-list{
-  list-style:none;
-  display:flex;
-  flex-direction:column;
-  gap:.8rem;
-  margin:0;
-  padding:0;
 }
 .steps-list li{
   display:grid;
@@ -462,18 +465,8 @@ a:focus-visible{outline:2px solid var(--cyan); outline-offset:3px}
   font-size:1.05rem;
   box-shadow:0 4px 12px rgba(59,107,255,.3);
 }
-.steps-list h3{
-  margin:0 0 .15rem;
-  font-size:1.05rem;
-  color:#0a1f66;
-  font-weight:700;
-}
-.steps-list p{
-  margin:0;
-  font-size:.9rem;
-  line-height:1.5;
-  color:#46557f;
-}
+.steps-list h3{margin:0 0 .15rem; font-size:1.05rem; color:#0a1f66; font-weight:700}
+.steps-list p{margin:0; font-size:.9rem; line-height:1.5; color:#46557f}
 .pill{
   white-space:nowrap;
   padding:.35rem .8rem;
@@ -493,7 +486,7 @@ a:focus-visible{outline:2px solid var(--cyan); outline-offset:3px}
 }
 .panel-right.light .total strong{color:#061437}
 
-/* ===== SEÇÃO 05: PROVA (highlight card) ===== */
+/* seção 05: prova - highlight card */
 .highlight-card{
   position:relative;
   margin:1.3rem 0 .2rem;
@@ -517,14 +510,15 @@ a:focus-visible{outline:2px solid var(--cyan); outline-offset:3px}
 }
 .highlight-card strong{color:var(--cyan)}
 .highlight-card p{font-size:1rem}
-.highlight-card ul{
-  margin:1rem 0;
-  padding-left:1rem;
-  list-style:disc;
-}
+.highlight-card ul{margin:1rem 0; padding-left:1rem; list-style:disc}
 .highlight-card ul li{color:var(--text-soft)}
+#prova .content section{
+  background:linear-gradient(135deg,rgba(59,107,255,.1),rgba(124,92,255,.06));
+  border-color:rgba(79,227,255,.3);
+}
+#prova .content section::before{background:linear-gradient(90deg,var(--cyan),var(--blue),var(--violet))}
 
-/* ===== SEÇÃO 06: CONTATO (planos) ===== */
+/* seção 06: contato - planos */
 .plans{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -532,7 +526,6 @@ a:focus-visible{outline:2px solid var(--cyan); outline-offset:3px}
   margin-top:1.5rem;
 }
 .plan{
-  position:relative;
   padding:1.6rem 1.4rem;
   background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(124,92,255,.04));
   border:1px solid var(--glass-border);
@@ -547,7 +540,6 @@ a:focus-visible{outline:2px solid var(--cyan); outline-offset:3px}
 .plan .price{
   font-size:2rem;
   font-weight:700;
-  color:#fff;
   margin:.6rem 0 .1rem;
   background:linear-gradient(90deg,var(--cyan),var(--blue));
   -webkit-background-clip:text;
@@ -579,15 +571,9 @@ a:focus-visible{outline:2px solid var(--cyan); outline-offset:3px}
   background:linear-gradient(135deg,var(--blue),var(--violet));
   color:#fff;
 }
+.cta-block{margin-top:1.5rem}
 
-/* ===== SEÇÕES CHEIAS (problema, custom, proximopasso) ===== */
-#problema, #custom, #proximopasso{
-  background:none;
-  border:0;
-  box-shadow:none;
-  backdrop-filter:none;
-  padding:0;
-}
+/* seções full-width: problema, custom, proximopasso */
 #problema .content section,
 #custom .content section,
 #proximopasso .content section{
@@ -597,27 +583,24 @@ a:focus-visible{outline:2px solid var(--cyan); outline-offset:3px}
   padding:3rem 1.5rem;
   text-align:center;
 }
-#problema h2, #custom h2, #proximopasso h2{justify-content:center}
-#problema h2::before, #custom h2::before, #proximopasso h2::before{content:''}
-#problema > p, #custom > p, #proximopasso > p{
+#problema h2,#custom h2,#proximopasso h2{justify-content:center}
+#problema > p,#custom > p,#proximopasso > p{
   max-width:62ch;
   margin-left:auto;
   margin-right:auto;
   text-align:center;
 }
-#problema .card, #custom .card{
+#problema .card,#custom .card{
   background:none;
   border:0;
   box-shadow:none;
   border-bottom:1px solid rgba(255,255,255,.15);
   padding:1rem 0;
+  text-align:left;
+  max-width:320px;
+  margin:0 auto;
 }
-#problema .cards{
-  gap:.8rem;
-  margin-top:2rem;
-  justify-content:center;
-}
-#problema .card:hover{border-bottom-color:var(--cyan)}
+#problema .cards{gap:.8rem; justify-content:center; margin-top:2rem}
 #custom .cards{
   display:flex;
   flex-wrap:wrap;
@@ -639,80 +622,7 @@ a:focus-visible{outline:2px solid var(--cyan); outline-offset:3px}
   border-color:var(--cyan);
   transform:translateY(-2px);
 }
-#problema .card p{max-width:100%}
-#custom .card p{max-width:100%}
-
-#contato .cta-block{margin-top:1.5rem}
-#prova .cta-block{margin-top:2rem}
-
-/* ===== FLOW (seção 05 se tiver) ===== */
-.flow{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-  gap:.9rem;
-  margin:2.2rem auto 0;
-  max-width:900px;
-  text-align:center;
-}
-.stage{
-  padding:1.2rem 1rem 1.1rem;
-  border-radius:18px;
-  background:linear-gradient(145deg,rgba(255,255,255,.05),rgba(124,92,255,.03));
-  border:1px solid var(--glass-border);
-  text-align:center;
-  transition:transform .2s, border-color .2s;
-}
-.stage:hover{
-  transform:translateY(-2px);
-  border-color:var(--cyan);
-}
-.stage .ico{
-  display:grid;
-  place-items:center;
-  width:44px;
-  height:44px;
-  margin:0 auto .7rem;
-  border-radius:50%;
-  color:var(--cyan);
-  background:rgba(63,115,255,.24);
-  box-shadow:inset 0 0 0 1px rgba(183,209,255,.35);
-}
-.stage .ico svg{
-  width:22px;
-  height:22px;
-  fill:none;
-  stroke:currentColor;
-  stroke-width:1.5;
-  stroke-linecap:round;
-  stroke-linejoin:round;
-}
-.stage .no{
-  display:block;
-  font-size:.7rem;
-  font-weight:600;
-  letter-spacing:.1em;
-  color:var(--cyan);
-  margin-bottom:.4rem;
-}
-.stage h3{margin:.15rem 0 .35rem; font-size:.98rem; color:#fff; font-weight:600}
-.stage p{font-size:.84rem; line-height:1.5; color:var(--text-soft)}
-.vid{
-  display:inline-flex;
-  align-items:center;
-  gap:.4rem;
-  margin-top:.85rem;
-  padding:.25rem .7rem;
-  border-radius:40px;
-  font-size:.72rem;
-  font-weight:600;
-  color:var(--cyan);
-  text-decoration:none;
-  background:rgba(120,168,255,.12);
-  border:1px solid rgba(183,209,255,.25);
-  transition:background .2s;
-}
-.vid:hover{background:rgba(120,168,255,.24)}
-.vid svg{width:11px; height:11px; fill:currentColor}
+#problema .card:hover{border-bottom-color:var(--cyan)}
 
 /* ===== FOOTER ===== */
 .portfolio-footer{
@@ -785,12 +695,12 @@ a:focus-visible{outline:2px solid var(--cyan); outline-offset:3px}
   .panel-left .cards.five{grid-template-columns:1fr}
   .panel-right.light{width:100%}
   .plans{grid-template-columns:1fr}
-  .plans .cta-block{margin-top:1.2rem}
 }
 @media (max-width:600px){
   .container{padding:1.5rem 1rem}
   .content section{padding:1.5rem 1.2rem}
   .hero{padding:2.5rem 1rem 0}
+  .hero-text h1{letter-spacing:-0.01em}
   .hero-img{
     width:calc(100% + 2rem);
     margin-left:-1rem;
@@ -813,7 +723,25 @@ a:focus-visible{outline:2px solid var(--cyan); outline-offset:3px}
   html{scroll-behavior:auto}
   *{transition:none !important; transform:none !important}
 }
-</style>
+</style>PE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IA Recruiter: Setup de recrutamento com IA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===== VARIAVEIS GLOBAIS ===== */
+:root{
+  --bg-dark:#020b22;
+  --bg-medium:#061437;
+  --bg-edge:#02112a;
+  --blue:#3b6bff;
+  --cyan:#4fe3ff;
+  --violet:#7c5cff;
+  --green:[...[truncated]
 </head>
 <body>
 <header class="hero">
